@@ -1,0 +1,95 @@
+<html>
+ <head>
+   <title>Формы</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+ <body>
+ 
+
+<h1>Тут мы работаем с формами</h1>
+<h2><u>Ассалам алейкум ва рахматуллахи ва баракатуху!</u></h2>
+
+ <form name="form1" method="post" >
+ <fieldset>
+  <p><b> Введите ваше имя:</b><br>
+   <input type="text" size="40" id="name1">
+  </p>
+  </fieldset>
+  <fieldset>
+  <p><b> Что вам ближе:</b><Br>
+   <input type="radio" name="tel" value="1a"> Телефон<Br>
+   <input type="radio" name="plansh" value="2a"> Планшет<Br>
+   <input type="radio" name="pc" value="3a"> Персональный компьютер<Br>
+  </p>
+  </fieldset>
+  <fieldset>
+  <p><b> Я выбираю:</b><Br>
+   <input type="radio" name="otduh" value="1b"> Отдых на природе<Br>
+   <input type="radio" name="sleep" value="2b"> Проспать весь день<Br>
+   <input type="radio" name="book" value="3b"> Весь день читать книги<Br>
+  </p>
+  </fieldset>
+  <fieldset>
+<p><input type="file" name="f">
+   <input type="submit" value="Отправить( Но Очистит)"></p>
+  </fieldset>
+  
+  <fieldset>
+      <p><input type="checkbox" id="che1">Сейчас 2018 год?</p>
+	 </fieldset> 
+	 <fieldset>
+	  <p><input type="checkbox" id="che2"> <label for="che2">Опа опа опа текс, да?</label>
+	   </p>
+	   </fieldset>
+	   </br>
+	   <fieldset>
+  <select name="месяц">
+<option value="1">Январь</option>
+<option value="2">Февраль</option>
+<option value="3">Март</option>
+<option value="4">Апрель</option>
+<option value="5">Май</option>
+<option value="6">Июнь</option>
+<option value="7">Июль</option>
+<option value="8">Август</option>
+<option value="9">Сентябрь</option>
+<option value="10">Октябрь</option>
+<option value="11">Ноябрь</option>
+<option value="12">Декабрь</option>
+</select>
+<input type="button" value="OK">
+</fieldset>
+</br>
+<fieldset>
+  <p>Комментарий<Br>
+   <textarea name="comment" cols="40" rows="3" id="tex"></textarea></p>
+  </fieldset>
+ <!--<fieldset>
+     <p><input type="submit" value="Отправить" id="hhhh"></p>
+  </fieldset>
+ -->
+  <fieldset>
+<button id="result">Say hi!</button>
+<div id="hhhh"></div>
+
+  </fieldset>
+ </form>
+ 
+ 
+<script>
+
+function say_hi() {
+    var fname = document.getElementById('name1').value;
+    var lname = document.getElementById('che1').value;
+	var che = document.getElementById('che2').value;
+    var text = document.getElementById('tex').value;
+ 
+    var html = 'Aha :' + fname + '; ' + lname + ';' + che + ';'+ text;
+ 
+    document.getElementById('hhhh').innerHTML = html;
+}
+ 
+document.getElementById('result').addEventListener('click', say_hi);
+</script>
+ </body> 
+</html>		
